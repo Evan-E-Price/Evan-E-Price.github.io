@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'Montserrat'; /*a name to be used later*/
+    src: url('Montserrat-Thin.otf'); /*URL to font*/
+}
+
+body{
+background-color: #26241B;
+color: white;
+font-family: Montserrat;
+}
+
+.links {
+width: 30px;
+height: 30px;
+top:-50px;
+left:-35px;
+z-index:999;
+margin-left: 30px;
+cursor: pointer;
+display: inline-block;
+-webkit-transition-property: all;
+-webkit-transition-duration: 0.3s;
+-webkit-transition-timing-function: ease;
+}
+
+
+.gmail{
+    background: url("../Images/Gmail.png") center no-repeat;
+    background-size: contain;
+}
+.gmail:hover{
+    background: url("../Images/GmailHover.png") center no-repeat;
+    background-size: contain;
+    transform: scale(1.2);
+}
+
+.github{
+    background: url("../Images/Github.png") center no-repeat;
+    background-size: contain;
+}
+.github:hover{
+    background: url("../Images/GithubHover.png") center no-repeat;
+    background-size: contain;
+    transform: scale(1.2);
+}
+
+.linkedin{
+    background: url("../Images/Linkedin.png") center no-repeat;
+    background-size: contain;
+}
+.linkedin:hover{
+    background: url("../Images/LinkedinHover.png") center no-repeat;
+    background-size: contain;
+    transform: scale(1.2);
+}
+
+.full-screen-container{
+    height: 100vh;
+    max-height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    display: block;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.main{
+    width: 80%;
+    justify-content: center;
+    display: flex;
+    max-height: 100vh;
+    height: 100vh;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.corner-borders {
+    background-image: url("../Images/topleftcorner.svg") no-repeat;
+}
+
+.main-inner{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.content-container{
+    z-index: 2;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+}
+
+.vl{
+    border-left: 4px solid;
+    border-image: linear-gradient(#FD80A8, #FCCE42) 1;
+}
+
+.hl{
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to left, #FD80A8, #FCCE42) 1;
+}

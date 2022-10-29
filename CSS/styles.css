@@ -9,18 +9,61 @@ color: white;
 font-family: Montserrat;
 }
 
-.links {
-width: 30px;
-height: 30px;
-top:-50px;
-left:-35px;
-z-index:999;
-margin-left: 30px;
-cursor: pointer;
-display: inline-block;
--webkit-transition-property: all;
--webkit-transition-duration: 0.3s;
--webkit-transition-timing-function: ease;
+.text-link {
+  position: relative;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.text-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+
+  background: linear-gradient(
+      to right,
+      rgba(252, 206, 66, 1),
+      rgba(253, 128, 168, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(252, 206, 66, 1),
+      rgba(253, 128, 168, 1));
+
+  background-size: 100% 3px, 0 3px;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.text-link:hover{
+color:inherit;
+text-decoration: inherit;
+}
+
+.text-link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+  background-size: 0 3px, 100% 3px;
+}
+
+.image-links {
+    width: 30px;
+    height: 30px;
+    top:-50px;
+    left:-35px;
+    z-index:999;
+    margin-left: 30px;
+    padding-right: 0px;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
 }
 
 
@@ -54,6 +97,17 @@ display: inline-block;
     transform: scale(1.2);
 }
 
+.home{
+    background: url("../Images/Home.png") center no-repeat;
+    background-size: contain;
+}
+
+.home:hover{
+    background: url("../Images/HomeHover.png") center no-repeat;
+    background-size: contain;
+    transform: scale(1.2);
+}
+
 .full-screen-container{
     height: 100vh;
     max-height: 100vh;
@@ -76,7 +130,11 @@ display: inline-block;
 }
 
 .corner-borders {
-    background-image: url("../Images/topleftcorner.svg") no-repeat;
+    background: url("../Images/topleftcorner.svg") no-repeat;
+    background-size: 50% 50%;
+    fill: red;
+    display: flex;
+    align-items: flex-start;
 }
 
 .main-inner{
@@ -100,6 +158,8 @@ display: inline-block;
 }
 
 .hl{
+    color: inherit;
+    text-decoration: inherit;
     border-bottom: 2px solid;
     border-image: linear-gradient(to left, #FD80A8, #FCCE42) 1;
 }

@@ -66,7 +66,6 @@ text-decoration: inherit;
     -webkit-transition-timing-function: ease;
 }
 
-
 .gmail{
     background: url("../Images/Gmail.png") center no-repeat;
     background-size: contain;
@@ -132,17 +131,14 @@ text-decoration: inherit;
 .corner-borders {
     background: url("../Images/topleftcorner.svg") no-repeat;
     background-size: 50% 50%;
-    fill: red;
-    display: flex;
-    align-items: flex-start;
 }
 
 .main-inner{
     position: relative;
     display: flex;
     width: 100vw;
-    margin-top: 0;
-    margin-bottom: 0;
+    padding: 50px
+
 }
 
 .content-container{
@@ -158,8 +154,16 @@ text-decoration: inherit;
 }
 
 .hl{
-    color: inherit;
-    text-decoration: inherit;
     border-bottom: 2px solid;
     border-image: linear-gradient(to left, #FD80A8, #FCCE42) 1;
+}
+
+.github-links{
+    color: inherit;
+    text-decoration: inherit;
+}
+.github-links:hover{
+    color: inherit;
+    font-style: italic;
+    text-decoration: inherit;
 }
